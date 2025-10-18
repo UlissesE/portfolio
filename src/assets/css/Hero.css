@@ -1,0 +1,21 @@
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  filter: brightness(0.2);
+  z-index: 0;
+  width:max-content;
+  height: max-content;
+  object-fit: cover;
+}
+
+.content {
+  position: relative;
+  color: #f1f1f1;
+  width: 100%;
+  height: max-content;
+  padding: 20px;
+  z-index: 10;
+}
