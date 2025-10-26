@@ -1,41 +1,54 @@
 import "../assets/css/Hero.css";
-import video from "../assets/videos/video.mp4";
+import TextType from "./reactBits/TextType";
+import LiquidEther from "./reactBits/LiquidEther";
 
 export default function Hero() {
-
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover opacity-60"
-        >
-          <source
-            src={video}
-            type="video/mp4"
-          />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black"></div>
+      <div style={{ width: "100%", height: '100%', position: "relative" }}>
+        <LiquidEther
+          // colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
+          colors={["#FF9FFC", "#5227FF", "#B19EEF"]}
+          mouseForce={20}
+          cursorSize={100}
+          isViscous={false}
+          viscous={30}
+          iterationsViscous={32}
+          iterationsPoisson={32}
+          resolution={0.5}
+          isBounce={false}
+          autoDemo={true}
+          autoSpeed={0.5}
+          autoIntensity={2.2}
+          takeoverDuration={0.25}
+          autoResumeDelay={3000}
+          autoRampDuration={0.6}
+        />
       </div>
 
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-6xl md:text-8xl mb-6 text-white">
-          Olá, eu sou <span className="text-cyan-400">Seu Nome</span>
+      <div className="absolute z-10 text-center px-4 max-w-4xl mx-auto">
+        <p className="text-white mb-6 text-2xl">Olá, eu sou</p>
+        <h1 className="text-6xl md:text-8xl mb-6 text-cyan-400">
+          Eduardo Ulisses
         </h1>
-        <p className="text-xl md:text-2xl text-cyan-200 mb-8">
-          Futuro Desenvolvedor Full Stack | Estudante de Engenharia de Software na FIAP
-        </p>
-        <div className="flex gap-4 justify-center flex-wrap">
-          <button 
 
-            className="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 text-black rounded-lg transition-colors"
-          >
+        <TextType
+          text={[
+            "Futuro Desenvolvedor Full Stack",
+            "Estudante de Engenharia de Softwar na FIAP",
+          ]}
+          typingSpeed={75}
+          pauseDuration={2000}
+          showCursor={true}
+          cursorCharacter="|"
+          className="text-xl md:text-2xl text-cyan-200 mb-8"
+        />
+
+        <div className="flex gap-4 justify-center flex-wrap">
+          <button className="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 text-black rounded-lg transition-colors">
             Ver Projetos
           </button>
-          <a 
+          <a
             href="#contato"
             className="px-8 py-3 border-2 border-cyan-400 hover:bg-cyan-400/10 text-cyan-400 rounded-lg transition-colors inline-block"
           >
