@@ -27,21 +27,21 @@ export default function Hero() {
       </div>
 
       <div className="absolute z-10 text-center px-4 max-w-4xl mx-auto">
-        <p className="text-white mb-6 text-2xl">Olá, eu sou</p>
-        <h1 className="text-6xl md:text-8xl mb-6 text-cyan-400">
+        <p className="mb-6 text-lg text-gray-500">Olá, eu sou</p>
+        <h1 className="text-6xl md:text-8xl mb-6 text-cyan-400 font-bold">
           Eduardo Ulisses
         </h1>
 
         <TextType
           text={[
-            "Futuro Desenvolvedor Full Stack",
-            "Estudante de Engenharia de Softwar na FIAP",
+            "Desenvolvedor Full Stack em Formação",
+            "Estudante de Engenharia de Software na FIAP",
           ]}
           typingSpeed={75}
-          pauseDuration={2000}
+          pauseDuration={2500}
           showCursor={true}
           cursorCharacter="|"
-          className="text-xl md:text-2xl text-cyan-200 mb-8"
+          className="text-xl md:text-2xl text-cyan-200/70 mb-8"
         />
 
         <div className="flex gap-4 justify-center flex-wrap">

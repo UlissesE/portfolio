@@ -1,8 +1,13 @@
 export default function About() {
   return (
-    <section id="sobre" className="py-20 px-4 min-h-screen">
+    <section
+      id="sobre"
+      className="py-20 px-4 min-h-screen bg-linear-to-b from-black to-indigo-900/70 to-200%"
+    >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-5xl mb-12 text-center text-cyan-400">Sobre mim</h2>
+        <h2 className="text-5xl my-24 text-center text-cyan-400 font-bold font-mono">
+          Sobre mim
+        </h2>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="w-full aspect-square rounded-2xl border-5 border-cyan-500/30 object-contain">
@@ -12,35 +17,32 @@ export default function About() {
               className="h-full object-cover rounded-lg"
             />
           </div>
-          <div className="text-cyan-100">
+          <div className="text-gray-500 leading-7 font-mono">
             <p className="mb-4">
-              Olá! Sou Eduardo Ulisses, tenho 19 anos, e sou estudante de
-              Engenharia de Software na{" "}
+              Olá! Sou Eduardo Ulisses, um desenvolvedor Full Stack em
+              crescimento e estudante de Engenharia de Software na {" "}
               <a
                 href="https://www.fiap.com.br"
                 target="_blank"
-                className="text-cyan-400"
+                className="text-cyan-400 font-bold"
               >
                 FIAP
               </a>
-              , renomada universidade de tecnologia no Brasil, a qual consegui
-              100% de bolsa via ProUni.
+              .
             </p>
             <p className="mb-4">
-              Minha jornada no mundo da tecnologia começou há pouco tempo, no
-              finalzinho de 2024, poucos meses antes de entrar na faculdade, e
-              desde então tenho me dedicado a aprender e evoluir constantemente,
-              sempre buscando as melhores práticas e tecnologias mais recentes.
+              Minha paixão por tecnologia nasceu no final de 2024, pouco antes
+              de conquistar uma bolsa integral <strong>(100% ProUni)</strong> para cursar
+              Engenharia de Software na FIAP. <br /><br />Sou um profissional proativo,
+              dedicado à busca constante por melhores práticas de codificação e
+              à exploração das tecnologias mais atuais.
             </p>
             <p className="mb-4">
-              Quando não estou programando, gosto de explorar novas tecnologias,
-              andar de bike para onde meu coração me levar, e fazer uma leitura
-              (agora tentando Nietzche).
-            </p>
-            <p>
-              Atualmente, estou procurando uma oportunidade de ingressar num
-              programa de estágio, para aplicar a tecnologia que eu sei e
-              ingressar no mercado, ampliando minha visão profissional em tech.
+              Atualmente, meu foco é ingressar em um <strong>programa de estágio</strong> para
+              traduzir minhas habilidades em projetos reais. Busco uma
+              oportunidade para aplicar meu conhecimento técnico, ganhar
+              experiência prática de mercado e expandir minha visão profissional
+              no setor de tecnologia.
             </p>
           </div>
         </div>
