@@ -52,7 +52,7 @@ export default function Hero() {
             href="#contato"
             className="px-8 py-3 border-2 border-cyan-400 hover:bg-cyan-400/10 text-cyan-400 rounded-lg transition-colors inline-block"
           >
-            Entre em Contato
+            Sobre mim
           </a>
         </div>
       </div>

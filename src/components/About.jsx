@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section
       id="sobre"
-      className="py-20 px-4 min-h-screen bg-linear-to-b from-black to-indigo-900/70 to-200%"
+      className="relative p-4 flex min-h-screen bg-gradient-to-b from-black to-cyan-950/30"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-5xl my-24 text-center text-cyan-400 font-bold font-mono">
@@ -17,7 +17,7 @@ export default function About() {
               className="h-full object-cover rounded-lg"
             />
           </div>
-          <div className="text-gray-500 leading-7 font-mono">
+          <div className="text-gray-500 leading-7 font-mono whitespace-normal">
             <p className="mb-4">
               Olá! Sou Eduardo Ulisses, um desenvolvedor Full Stack em
               crescimento e estudante de Engenharia de Software na {" "}

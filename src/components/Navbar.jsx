@@ -12,16 +12,16 @@ export default function Navbar() {
                 </div>
                 <ul className="hidden md:flex flex-wrap md:gap-10 text-white text-lg">
                     <li>
-                        <Link>Sobre</Link>
+                        <Link to="/projetos">Projetos</Link>
                     </li>
                     <li>
-                        <Link>Projetos</Link>
+                        <Link to="/sobre">Sobre</Link>
                     </li>
                     <li>
-                        <Link>Habilidades</Link>
+                        <Link to="/sobre#habilidades">Habilidades</Link>
                     </li>
                     <li>
-                        <Link>Contato</Link>
+                        <Link to="/sobre#contato">Contato</Link>
                     </li>
                 </ul>
             </div>
