@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section
       id="sobre"
-      className="relative p-4 flex min-h-screen bg-gradient-to-b from-black to-cyan-950/30"
+      className="relative p-4 flex min-h-screen bg-gradient-to-t from-black to-cyan-950/30"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-5xl my-24 text-center text-cyan-400 font-bold font-mono">
