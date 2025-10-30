@@ -32,7 +32,7 @@ export function Skills() {
     >
       <div className="max-w-6xl mx-auto">
         <header>
-          <h2 className="text-5xl mb-12 text-center text-cyan-400">
+          <h2 className="text-5xl mt-24 mb-12 text-center bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 bg-clip-text text-transparent font-bold font-mono">
             Habilidades
           </h2>
         </header>

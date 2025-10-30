@@ -134,7 +134,7 @@ export default function Hero() {
                 boxShadow: "0 0 25px rgba(34, 211, 238, 0.5)",
               }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-black rounded-xl transition-all shadow-lg shadow-cyan-500/50 min-w-[200px]"
+              className="cursor-pointer px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-black rounded-xl transition-all shadow-lg shadow-cyan-500/50 min-w-[200px]"
             >
               <span className="flex items-center justify-center gap-2">
                 Sobre Mim
@@ -145,7 +145,7 @@ export default function Hero() {
               onClick={() => navigate("projetos")}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-4 border-2 border-cyan-400 hover:bg-cyan-400/10 text-cyan-400 rounded-xl transition-all backdrop-blur-sm min-w-[200px]"
+              className="px-10 py-4 border-2 border-cyan-400 hover:bg-cyan-400/10 text-cyan-400 rounded-xl transition-all backdrop-blur-sm min-w-[200px] cursor-pointer"
             >
               <span className="flex items-center justify-center gap-2">
                 Ver Projetos
