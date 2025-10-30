@@ -25,15 +25,15 @@ export default function Navbar() {
         </div>
         <ul className="hidden md:flex flex-wrap md:gap-10 text-white text-lg">
           <li>
-            <Link to="/projetos">Projetos</Link>
+            <Link to="/projetos" className="text-white hover:text-cyan-400 transition-colors">Projetos</Link>
           </li>
           <li>
-            <Link to="/sobre" reloadDocument>Sobre</Link>
+            <Link to="/sobre" reloadDocument className="text-white hover:text-cyan-400 transition-colors">Sobre</Link>
           </li>
           <li>
             <button
               onClick={() => handleNavigation("/sobre", "habilidades")}
-              className="text-white hover:text-cyan-400 transition-colors"
+              className="text-white hover:text-cyan-400 transition-colors cursor-pointer"
             >
               Habilidades
             </button>
@@ -41,7 +41,7 @@ export default function Navbar() {
           <li>
             <button
               onClick={() => handleNavigation("/sobre", "contato")}
-              className="text-white hover:text-cyan-400 transition-colors"
+              className="text-white hover:text-cyan-400 transition-colors cursor-pointer"
             >
               Contato
             </button>

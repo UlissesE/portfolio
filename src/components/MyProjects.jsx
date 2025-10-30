@@ -15,7 +15,6 @@ export default function MyProjects() {
         setRepos(sortedRepos.slice(0, 6));
       });
   }, []);
-  console.log(repos);
   return (
     <section
       id="projetos"
