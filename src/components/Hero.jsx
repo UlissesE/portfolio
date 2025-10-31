@@ -4,6 +4,7 @@ import LiquidEther from "./reactBits/LiquidEther";
 import * as motion from "motion/react-client";
 import { Sparkles, Rocket, Code2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import BouncePointsBg from "./BouncePointsBg";
 
 export default function Hero() {
   const navigate = useNavigate("");
@@ -36,28 +37,6 @@ export default function Hero() {
           autoResumeDelay={0}
           autoRampDuration={0.6}
         />
-      </div>
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-cyan-400 rounded-full"
-            initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-              opacity: 0,
-            }}
-            animate={{
-              y: [null, Math.random() * window.innerHeight],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: Math.random() * 3 + 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
       </div>
       <div className="mt-30 relative z-10 text-center px-4 max-w-5xl mx-auto">
         <motion.div

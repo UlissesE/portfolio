@@ -1,4 +1,5 @@
 import About from "../components/About";
+import BouncePointsBg from "../components/BouncePointsBg";
 import MyProjects from "../components/MyProjects";
 import { Skills } from "../components/Skills";
 import { motion, useInView } from "framer-motion";
@@ -24,6 +25,7 @@ function AnimatedSection({ children }) {
 export default function AboutPage() {
   return (
     <>
+
       <AnimatedSection>
         <About />
       </AnimatedSection>
