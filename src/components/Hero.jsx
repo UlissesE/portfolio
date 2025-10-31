@@ -70,7 +70,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1 className="text-6xl md:text-8xl lg:text-9xl mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 bg-clip-text text-transparent font-bold">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 bg-clip-text text-transparent font-bold">
               Eduardo Ulisses
             </h1>
           </motion.div>
