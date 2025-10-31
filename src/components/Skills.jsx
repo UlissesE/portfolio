@@ -27,7 +27,7 @@ export function Skills() {
   return (
     <section
       id="habilidades"
-      className="py-20 px-4 bg-black"
+      className="py-20 px-4 relative"
       aria-label="Minhas Habilidades"
     >
       <div className="max-w-6xl mx-auto">

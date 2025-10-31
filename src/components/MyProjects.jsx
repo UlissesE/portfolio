@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Github, ExternalLink, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function MyProjects() {
   const [repos, setRepos] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("https://api.github.com/users/UlissesE/repos")
@@ -18,7 +20,7 @@ export default function MyProjects() {
   return (
     <section
       id="projetos"
-      className="py-20 px-4 bg-gradient-to-b from-black to-cyan-950/20"
+      className="relative py-20 px-4 bg-gradient-to-b from-black to-cyan-950/30"
     >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-5xl mb-12 text-center bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 bg-clip-text text-transparent font-bold font-mono">
@@ -69,7 +71,10 @@ export default function MyProjects() {
 
         {/* View All Projects Button */}
         <div className="text-center">
-          <button className="inline-flex items-center gap-2 px-8 py-3 bg-cyan-500 hover:bg-cyan-600 text-black rounded-lg transition-colors group">
+          <button
+            onClick={() => navigate("/projetos")}
+            className="inline-flex items-center gap-2 cursor-pointer px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-black rounded-xl transition-all shadow-lg shadow-cyan-500/50 min-w-[200px] group hover:scale-105 hover:shadow-sm focus:scale-95"
+          >
             <span>Ver Todos os Projetos</span>
             <ArrowRight
               size={20}

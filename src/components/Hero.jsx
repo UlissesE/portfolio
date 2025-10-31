@@ -4,7 +4,6 @@ import LiquidEther from "./reactBits/LiquidEther";
 import * as motion from "motion/react-client";
 import { Sparkles, Rocket, Code2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import BouncePointsBg from "./BouncePointsBg";
 
 export default function Hero() {
   const navigate = useNavigate("");
@@ -38,7 +37,8 @@ export default function Hero() {
           autoRampDuration={0.6}
         />
       </div>
-      <div className="mt-30 relative z-10 text-center px-4 max-w-5xl mx-auto">
+
+      <div className="my-auto relative text-center px-4 max-w-5xl mx-auto">
         <motion.div
           initial={{ scale: 0, rotate: -180 }}
           animate={{ scale: 1, rotate: 0 }}
@@ -64,13 +64,13 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        <div className=" z-10 text-center px-4 max-w-4xl mx-auto">
+        <div className="z-10 text-center px-4 max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 bg-clip-text text-transparent font-bold">
+            <h1 className="z-10 relative text-5xl md:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 bg-clip-text text-transparent font-bold">
               Eduardo Ulisses
             </h1>
           </motion.div>
@@ -96,7 +96,7 @@ export default function Hero() {
               pauseDuration={2500}
               showCursor={true}
               cursorCharacter="|"
-              className="text-xl md:text-3xl text-cyan-200/70 mb-8"
+              className="z-10 relative text-xl md:text-3xl text-cyan-200/70 mb-8"
             />
           </motion.div>
 
@@ -104,7 +104,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <motion.button
               onClick={() => navigate("sobre")}
