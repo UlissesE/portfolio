@@ -40,7 +40,7 @@ export function Skills() {
           {skills.map((skillSet, index) => (
             <article
               key={index}
-              className="bg-gradient-to-br from-cyan-950/30 to-black border-2 border-cyan-500/30 rounded-xl p-8"
+              className="bg-gradient-to-br from-cyan-950/30 to-black border-2 border-cyan-500/30 rounded-xl p-8 hover:border-cyan-400 transition-all hover:shadow-lg hover:shadow-cyan-500/20"
               role="listitem"
             >
               <h3

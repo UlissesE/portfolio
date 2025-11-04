@@ -1,31 +1,32 @@
-import Hamburger from "hamburger-react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-export default function HamburguerComponent() {
-  const [open, setOpen] = useState(false);
+export default function HamburguerComponent({ closeMenu }) {
   return (
-    <div className="relative">
-      <Hamburger color="white" toggled={open} toggle={setOpen} />
-
-      {open && (
-        <div className="absolute right-0 top-17.5 text-white text-right w-[200px] bg-black/90 py-4">
-                <ul className="flex md:hidden flex-col gap-5 text-white text-lg">
-                    <li>
-                        <Link>Sobre</Link>
-                    </li>
-                    <li>
-                        <Link>Projetos</Link>
-                    </li>
-                    <li>
-                        <Link>Habilidades</Link>
-                    </li>
-                    <li>
-                        <Link>Contato</Link>
-                    </li>
-                </ul>
-        </div>
-      )}
+    <div className="md:hidden block shadow-md backdrop-blur-xs py-4 border-t border-cyan-500/30 animate-in slide-in-from-top">
+      <ul className="flex flex-col gap-3 w-full text-center py-3 px-2 text-cyan-100 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors rounded text-lg">
+        <NavLink
+          to="/projetos"
+          onClick={closeMenu}
+          className={({ isActive }) =>
+            `w-full nav-links relative transition-colors py-3 px-2 rounded bg-cyan-800 ${
+              isActive ? "bg-cyan-800" : "bg-cyan-950"
+            }`
+          }
+        >
+          Projetos
+        </NavLink>
+        <NavLink
+          to="/sobre"
+          onClick={closeMenu}
+          className={({ isActive }) =>
+            `w-full nav-links relative transition-colors py-3 px-2 rounded bg-cyan-800 ${
+              isActive ? "bg-cyan-800" : "bg-cyan-950"
+            }`
+          }
+        >
+          Sobre
+        </NavLink>
+      </ul>
     </div>
   );
 }
