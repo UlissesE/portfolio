@@ -25,6 +25,19 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex flex-wrap md:gap-10 text-white text-lg">
+                  <li>
+                    <NavLink
+                      to="/"
+                      className={({ isActive }) =>
+                        `nav-links relative transition-colors
+                        ${isActive
+                          ? " text-cyan-400 hover:text-cyan-800"
+                          : "text-white hover:text-cyan-400"}`
+                      }
+                    >
+                      Início
+                    </NavLink>
+                  </li>
           <li>
             <NavLink
               to="/projetos"
