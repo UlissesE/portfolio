@@ -25,30 +25,19 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex flex-wrap md:gap-10 text-white text-lg">
-                  <li>
-                    <NavLink
-                      to="/"
-                      className={({ isActive }) =>
-                        `nav-links relative transition-colors
-                        ${isActive
-                          ? " text-cyan-400 hover:text-cyan-800"
-                          : "text-white hover:text-cyan-400"}`
-                      }
-                    >
-                      Início
-                    </NavLink>
-                  </li>
           <li>
             <NavLink
-              to="/projetos"
-                className={({ isActive }) =>
+              to="/"
+              className={({ isActive }) =>
                 `nav-links relative transition-colors
-                ${isActive
-                  ? " text-cyan-400 hover:text-cyan-800"
-                  : "text-white hover:text-cyan-400"}`
+                        ${
+                          isActive
+                            ? " text-cyan-400 hover:text-cyan-800"
+                            : "text-white hover:text-cyan-400"
+                        }`
               }
             >
-              Projetos
+              Início
             </NavLink>
           </li>
           <li>
@@ -56,12 +45,29 @@ export default function Navbar() {
               to="/sobre"
               className={({ isActive }) =>
                 `nav-links relative transition-colors
-                ${isActive
-                  ? " text-cyan-400 hover:text-cyan-800"
-                  : "text-white hover:text-cyan-400"}`
+                    ${
+                      isActive
+                        ? " text-cyan-400 hover:text-cyan-800"
+                        : "text-white hover:text-cyan-400"
+                    }`
               }
             >
               Sobre
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/projetos"
+              className={({ isActive }) =>
+                `nav-links relative transition-colors
+                ${
+                  isActive
+                    ? " text-cyan-400 hover:text-cyan-800"
+                    : "text-white hover:text-cyan-400"
+                }`
+              }
+            >
+              Projetos
             </NavLink>
           </li>
         </ul>
@@ -71,7 +77,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {open && <HamburguerComponent closeMenu={() => setOpen(false)}/>}
+      {open && <HamburguerComponent closeMenu={() => setOpen(false)} />}
     </nav>
   );
 }

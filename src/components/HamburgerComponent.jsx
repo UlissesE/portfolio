@@ -16,17 +16,6 @@ export default function HamburguerComponent({ closeMenu }) {
           Início
         </NavLink>
         <NavLink
-          to="/projetos"
-          onClick={closeMenu}
-          className={({ isActive }) =>
-            `w-full nav-links relative transition-colors py-3 px-2 rounded bg-cyan-800 ${
-              isActive ? "bg-cyan-800" : "bg-cyan-950"
-            }`
-          }
-        >
-          Projetos
-        </NavLink>
-        <NavLink
           to="/sobre"
           onClick={closeMenu}
           className={({ isActive }) =>
@@ -36,6 +25,17 @@ export default function HamburguerComponent({ closeMenu }) {
           }
         >
           Sobre
+        </NavLink>
+        <NavLink
+          to="/projetos"
+          onClick={closeMenu}
+          className={({ isActive }) =>
+            `w-full nav-links relative transition-colors py-3 px-2 rounded bg-cyan-800 ${
+              isActive ? "bg-cyan-800" : "bg-cyan-950"
+            }`
+          }
+        >
+          Projetos
         </NavLink>
       </ul>
     </div>
