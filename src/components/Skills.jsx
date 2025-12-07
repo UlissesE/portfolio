@@ -5,8 +5,12 @@ import {
   LucideHammer,
   SpeakerIcon,
 } from "lucide-react";
+import { motion } from "framer-motion";
+import AnimatedSection from "./AnimatedInView";
+import AnimatedSectionCard from "./AnimtedInViewCard";
 
 export function Skills() {
+
   const skills = [
     {
       category: "Frontend",
@@ -47,17 +51,18 @@ export function Skills() {
       aria-label="Minhas Habilidades"
     >
       <div className="max-w-6xl mx-auto flex flex-col items-center">
-        <header>
+        <AnimatedSection>
           <h2 className="text-5xl mb-12 text-center bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 bg-clip-text text-transparent font-bold font-mono">
             Habilidades
           </h2>
-        </header>
+        </AnimatedSection>
         <div className="grid md:grid-cols-2 gap-8" role="list">
           {skills.map((skillSet, index) => (
-            <article
+            <AnimatedSectionCard
               key={index}
-              className="bg-gradient-to-br from-cyan-950/30 to-black border-2 border-cyan-500/40 rounded-xl p-8 hover:border-cyan-400 transition-all hover:shadow-lg hover:shadow-cyan-500/20"
+              className="bg-gradient-to-br from-cyan-950/30 to-black border-2 border-cyan-500/40 rounded-xl p-8 hover:border-cyan-400 transition-colors hover:shadow-lg hover:shadow-cyan-500/20"
               role="listitem"
+              delay={((index + 1) * 2) / 10}
             >
               <div className="mb-3 flex gap-5 items-center">
                 <div
@@ -87,10 +92,12 @@ export function Skills() {
                   </li>
                 ))}
               </ul>
-            </article>
+            </AnimatedSectionCard>
           ))}
         </div>
-        <div className="md:w-[50%] mt-10 flex flex-col md:flex-row items-center gap-3 p-4 bg-cyan-500/10 border-2 border-yellow-400/50 hover:border-yellow-300 rounded-lg group transition-all duration-100 hover:shadow-2xl hover:shadow-yellow-500/20">
+        <AnimatedSection
+          className="md:w-[50%] mt-10 flex flex-col md:flex-row items-center gap-3 p-4 bg-cyan-500/10 border-2 border-yellow-400/50 hover:border-yellow-300 rounded-lg group transition-colors hover:shadow-2xl hover:shadow-yellow-500/20"
+        >
           <Lightbulb className="w-14 h-14 text-yellow-600 group-hover:text-yellow-200 transition-colors duration-100 flex-shrink-0" />
           <p className="text-cyan-100/80">
             Nota: ainda estou aprendendo como utilizar algumas tecnologias.
@@ -98,7 +105,7 @@ export function Skills() {
             Recentemente comecei a aprender a linguagem Java, diferentes tipos
             de Algoritmo, Linux e até mesmo SQL com Postgre.
           </p>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );

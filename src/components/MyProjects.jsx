@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { Github, ExternalLink, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import AnimatedSectionCard from "./AnimtedInViewCard";
+import { motion } from "framer-motion";
+import AnimatedSection from "./AnimatedInView";
 
 export default function MyProjects() {
   const [repos, setRepos] = useState([]);
@@ -26,14 +29,17 @@ export default function MyProjects() {
   return (
     <section id="projetos" className="relative py-20 px-4">
       <div className="max-w-7xl mx-auto">
+        <AnimatedSection>
         <h2 className="text-5xl mb-12 text-center bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 bg-clip-text text-transparent font-bold font-mono">
           Últimos Projetos
         </h2>
+        </AnimatedSection>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {repos.map((project, index) => (
-            <div
+            <AnimatedSectionCard
               key={index}
-              className="group bg-black border-2 border-cyan-500/30 rounded-xl overflow-hidden hover:border-cyan-400 transition-all hover:shadow-lg hover:shadow-cyan-500/20"
+              className="group bg-black border-2 border-cyan-500/30 rounded-xl overflow-hidden hover:border-cyan-400 transition-colors hover:shadow-lg hover:shadow-cyan-500/20"
+              delay={((index + 1) * 2) / 10}
             >
               <div className="relative h-40 overflow-hidden bg-cyan-950/20">
                 <img
@@ -79,7 +85,7 @@ export default function MyProjects() {
                   )}
                 </div>
               </div>
-            </div>
+            </AnimatedSectionCard>
           ))}
         </div>
 
